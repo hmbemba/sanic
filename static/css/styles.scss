@@ -1,0 +1,154 @@
+@import 'SASS_Functions/Base';
+@import 'SASS_Functions/Color';
+@import 'SASS_Functions/Flex';
+@import 'SASS_Functions/Hover';
+@import 'SASS_Functions/MediaQueries';
+@import 'SASS_Functions/Utils';
+
+
+.topLevel {
+    height: 100vh;
+    background-color: #202020;
+}
+
+.topNav {
+    @include flexRow;
+    @include rowItemPos(3);
+    padding-top: 10px;
+
+    .navLeft {
+        @include flexRow;
+
+        .button {
+            color: #ACBBAC;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #373737;
+                border-bottom: solid #7E57C2 5px;
+            }
+        }
+
+        @media (max-width:993px) {
+            display: none;
+        }
+
+    }
+
+    .navLeftMobile {
+
+        .burger {
+            gap: 100px;
+            cursor: pointer;
+            padding: 10px;
+
+            div {
+                width: 30px;
+                height: 9px;
+                background-color: #BBBBBB;
+                border: solid;
+                border-radius: 10px;
+
+            }
+        }
+
+
+        @media (min-width:993px) {
+            display: none;
+        }
+
+
+    }
+
+    .navRight {
+
+        @include flexRow;
+        gap: 15px;
+        padding-right: 20px;
+
+        .signup {
+            color: white;
+            border: solid #7E57C2 2px;
+            border-radius: 5px;
+            @include myPadding(15px, 15px, 10px, 10px);
+            cursor: pointer;
+        }
+
+        .login {
+            color: #BBBBBB;
+            @include myPadding(15px, 15px, 10px, 10px);
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
+
+    }
+
+}
+
+.contentContainer {
+    @include flexRow;
+    height: 100vh;
+
+    .sidebar {
+        border: solid grey 1px;
+        flex-basis: 25%;
+
+        @media (max-width:993px) {
+            display: none;
+        }
+
+        .collapseSidebarContainer {
+            @include flexRow;
+            @include rowItemPos(4);
+
+            .collapseSidebarButton {
+                color: white;
+                border-left: solid grey 1px;
+                border-bottom: solid grey 1px;
+
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .mainContent {
+        border: solid grey 1px;
+        width: 100%;
+
+        .uncollapseSidebarContainer {
+            @include flexRow;
+            @include rowItemPos(3);
+
+            .uncollapseSidebarButton {
+                color: white;
+                border-right: solid grey 1px;
+                border-bottom: solid grey 1px;
+
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .actualContent {
+            padding: 20px;
+
+            .landingPageHeadline {
+                color: white;
+                font-weight: bold;
+                font-size: 70px;
+
+                .header {}
+
+                .typing {}
+            }
+
+        }
+
+
+
+    }
+}

@@ -1,0 +1,25 @@
+$list1: blue,green,red;
+// @include gradient(left, $list1);
+@mixin gradient($direction, $list) { 
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);  
+}
+
+///color/////////////-------------------------------------------------------------------------------------------------
+//darken($color, $amount)
+//lighten($main-colour, 25%);
+//color.complement(#6b717f); 
+
+$main-color: hsl(251, 100%, 50%);
+$palette-span: 90deg;
+$saturation-increment: 5%;
+$number-of-colors: 5;
+@function getPaletteVariation($i) {
+    @return desaturate( adjust-hue($main-color, ($palette-span / $number-of-colors) * $i), $saturation-increment * $i );
+}
+$color2: getPaletteVariation(1);
+$color3: getPaletteVariation(2);
+$color4: getPaletteVariation(3);
+$color5: getPaletteVariation(4);

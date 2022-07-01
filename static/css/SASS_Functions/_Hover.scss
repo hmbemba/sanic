@@ -1,0 +1,8 @@
+@mixin growOnHover($amt:1.1) {
+
+    transition: transform .2s ease-in-out;
+    &:hover{
+      transform: scale($amt);
+    }
+    
+  }

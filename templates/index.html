@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Title</title>
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <!-- Alpine Plugins -->
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Alpine Core -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="topLevel">
+      <div class="topNav">
+        <div class="navLeft">
+          <div class="button">Home</div>
+          <div class="button">Hot or Not</div>
+          <div class="button">Chat</div>
+          <div class="button">FAQ</div>
+          <div class="button">List of Curators</div>
+          <div class="button">Popular</div>
+        </div>
+
+        <div class="navLeftMobile">
+          <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="navRight">
+          <div class="button signup">SIGN UP</div>
+          <div class="button login">LOG IN</div>
+        </div>
+      </div>
+
+      <div class="contentContainer" x-data="{ open: true }">
+        <div class="sidebar" x-show="open">
+          <div class="collapseSidebarContainer">
+            <div class="collapseSidebarButton" x-on:click="open = ! open">
+              <
+            </div>
+          </div>
+        </div>
+
+        <div class="mainContent">
+          <div class="uncollapseSidebarContainer" x-show="!open">
+            <div class="uncollapseSidebarButton" x-on:click="open = ! open">
+              >
+            </div>
+          </div>
+
+          <div class="actualContent">
+            <div class="landingPageHeadline">
+              <div class="header">We help you connect with:</div>
+              <div class="typing">
+                <div class="typing-effect">
+{% for item in var %}
+{{item}}
+{% endfor %}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="text"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.topLevel {
+  height: 100vh;
+  background-color: #202020;
+}
+
+.topNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+}
+
+.topNav .navLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.topNav .navLeft .button {
+  color: #ACBBAC;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.topNav .navLeft .button:hover {
+  background-color: #373737;
+  border-bottom: solid #7E57C2 5px;
+}
+
+@media (max-width: 993px) {
+  .topNav .navLeft {
+    display: none;
+  }
+}
+
+.topNav .navLeftMobile .burger {
+  gap: 100px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.topNav .navLeftMobile .burger div {
+  width: 30px;
+  height: 9px;
+  background-color: #BBBBBB;
+  border: solid;
+  border-radius: 10px;
+}
+
+@media (min-width: 993px) {
+  .topNav .navLeftMobile {
+    display: none;
+  }
+}
+
+.topNav .navRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  padding-right: 20px;
+}
+
+.topNav .navRight .signup {
+  color: white;
+  border: solid #7E57C2 2px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.topNav .navRight .login {
+  color: #BBBBBB;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh;
+}
+
+.contentContainer .sidebar {
+  border: solid grey 1px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+@media (max-width: 993px) {
+  .contentContainer .sidebar {
+    display: none;
+  }
+}
+
+.contentContainer .sidebar .collapseSidebarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contentContainer .sidebar .collapseSidebarContainer .collapseSidebarButton {
+  color: white;
+  border-left: solid grey 1px;
+  border-bottom: solid grey 1px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.contentContainer .mainContent {
+  border: solid grey 1px;
+  width: 100%;
+}
+
+.contentContainer .mainContent .uncollapseSidebarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contentContainer .mainContent .uncollapseSidebarContainer .uncollapseSidebarButton {
+  color: white;
+  border-right: solid grey 1px;
+  border-bottom: solid grey 1px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.contentContainer .mainContent .actualContent {
+  padding: 20px;
+}
+
+.contentContainer .mainContent .actualContent .landingPageHeadline {
+  color: white;
+  font-weight: bold;
+  font-size: 70px;
+}
+/*# sourceMappingURL=styles.css.map */
